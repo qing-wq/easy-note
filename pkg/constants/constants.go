@@ -17,4 +17,5 @@ const (
 	Total                   = "total"
 	Notes                   = "notes"
 	NoteID                  = "note_id"
+	SecretKey               = "secrete key"
 )
