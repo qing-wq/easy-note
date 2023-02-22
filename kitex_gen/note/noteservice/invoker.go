@@ -7,7 +7,7 @@ import (
 	note "github.com/qing-wq/easy-note/kitex_gen/note"
 )
 
-// NewInvoker creates a server.Invoker with the given handler and options.
+// NewInvoker creates a server.Invoker with the given handlers and options.
 func NewInvoker(handler note.NoteService, opts ...server.Option) server.Invoker {
 	var options []server.Option
 

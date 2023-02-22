@@ -7,7 +7,7 @@ import (
 	user "github.com/qing-wq/easy-note/kitex_gen/user"
 )
 
-// NewInvoker creates a server.Invoker with the given handler and options.
+// NewInvoker creates a server.Invoker with the given handlers and options.
 func NewInvoker(handler user.UserService, opts ...server.Option) server.Invoker {
 	var options []server.Option
 

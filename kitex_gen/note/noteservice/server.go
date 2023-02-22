@@ -6,7 +6,7 @@ import (
 	note "github.com/qing-wq/easy-note/kitex_gen/note"
 )
 
-// NewServer creates a server.Server with the given handler and options.
+// NewServer creates a server.Server with the given handlers and options.
 func NewServer(handler note.NoteService, opts ...server.Option) server.Server {
 	var options []server.Option
 
