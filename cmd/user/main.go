@@ -26,7 +26,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	addr, err := net.ResolveIPAddr("tcp", constants.UserServiceAddr)
+	addr, err := net.ResolveTCPAddr("tcp", constants.UserServiceAddr)
 	if err != nil {
 		panic(err)
 	}
@@ -48,4 +48,3 @@ func main() {
 		klog.Fatal(err)
 	}
 }
-

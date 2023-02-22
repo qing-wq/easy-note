@@ -25,7 +25,7 @@ func Register(ctx context.Context, c *app.RequestContext) {
 		Password: registerVar.PassWord,
 	})
 	if err != nil {
-		SendResponse(c, errno.ConvertErr(err), nil)
+		SendResponse(c, errno.UserAlreadyExistErr, nil)
 		return
 	}
 	SendResponse(c, errno.Success, nil)

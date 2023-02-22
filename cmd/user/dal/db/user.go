@@ -2,6 +2,7 @@ package db
 
 import (
 	"context"
+	"fmt"
 	"github.com/qing-wq/easy-note/pkg/constants"
 	"gorm.io/gorm"
 )
@@ -9,7 +10,7 @@ import (
 type User struct {
 	gorm.Model
 	UserName string `json:"user_name"`
-	PassWord string `json:"pass_word"`
+	PassWord string `json:"password"`
 }
 
 func (u *User) TableName() string {
@@ -29,6 +30,7 @@ func MGetUsers(ctx context.Context, userIDs []int64) ([]*User, error) {
 }
 
 func CreateUser(ctx context.Context, users []*User) error {
+	fmt.Println("user ctx !!!!!!!!!", ctx)
 	return DB.WithContext(ctx).Create(users).Error
 }
 

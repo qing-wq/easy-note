@@ -31,7 +31,7 @@ func main() {
 	)
 	authMiddleware, _ := jwt.New(&jwt.HertzJWTMiddleware{
 		Key:        []byte(constants.SecretKey),
-		Timeout:    time.Hour,
+		Timeout:    time.Hour * 6,
 		MaxRefresh: time.Hour,
 		PayloadFunc: func(data interface{}) jwt.MapClaims {
 			if v, ok := data.(int64); ok {

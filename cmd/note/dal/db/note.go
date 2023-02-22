@@ -19,7 +19,10 @@ func (n *Note) TableName() string {
 
 // CreateNote create note info
 func CreateNote(ctx context.Context, notes []*Note) error {
-	return DB.WithContext(ctx).Create(notes).Error
+	if err := DB.WithContext(ctx).Create(notes).Error; err != nil {
+		return err
+	}
+	return nil
 }
 
 func DeleteNote(ctx context.Context, noteID, userID int64) error {

@@ -14,7 +14,7 @@ func BuildBaseResp(err error) *note.BaseResp {
 
 	e := errno.ErrNo{}
 	if errors.As(err, &e) {
-		baseResp(e)
+		return baseResp(e)
 	}
 
 	s := errno.ServiceErr.WithMessage(err.Error())

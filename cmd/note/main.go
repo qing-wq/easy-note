@@ -28,7 +28,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	addr, err := net.ResolveIPAddr("tcp", constants.NoteServiceAddr)
+	addr, err := net.ResolveTCPAddr("tcp", constants.NoteServiceAddr)
 	if err != nil {
 		panic(err)
 	}

@@ -62,9 +62,9 @@ func (s *UserServiceImpl) CheckUser(ctx context.Context, req *user.CheckUserRequ
 		resp.BaseResp = pack.BuildBaseResp(errno.ParamErr)
 		return resp, nil
 	}
-	uId, err := service.NewCheckUserService(ctx).CheckUser(req)
-	if err != nil {
-		resp.BaseResp = pack.BuildBaseResp(err)
+	uId, err2 := service.NewCheckUserService(ctx).CheckUser(req)
+	if err2 != nil {
+		resp.BaseResp = pack.BuildBaseResp(err2)
 		return resp, err
 	}
 
