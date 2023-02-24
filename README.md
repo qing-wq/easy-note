@@ -201,7 +201,7 @@ curl --location --request POST '127.0.0.1:8080/v1/user/login' \
 ### Create Note
 ```shell
 curl --location --request POST '127.0.0.1:8080/v1/note' \
---header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzcwNzkyODAsImlkIjoxLCJvcmlnX2lhdCI6MTY3NzA3NTY4MH0.lgJdfukwgvyNkFZ2cSN7y0_En0G_62w0A2vJyKaPOo4' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzcyMzM3NDAsImlkIjoxLCJvcmlnX2lhdCI6MTY3NzIxMjE0MH0.ZsRqWyChL0ifazRk4m-xRR2XAMV-u8HtyVuKXwya0S4' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "title":"test title",
@@ -228,7 +228,7 @@ curl --location --request POST '127.0.0.1:8080/v1/note' \
 ### Query Note
 ```shell
 curl --location --request GET '127.0.0.1:8080/v1/note/query?offset=0&limit=20&search_keyword=test' \
---header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzcwNzkyODAsImlkIjoxLCJvcmlnX2lhdCI6MTY3NzA3NTY4MH0.lgJdfukwgvyNkFZ2cSN7y0_En0G_62w0A2vJyKaPOo4'
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzcyMzM3NDAsImlkIjoxLCJvcmlnX2lhdCI6MTY3NzIxMjE0MH0.ZsRqWyChL0ifazRk4m-xRR2XAMV-u8HtyVuKXwya0S4'
 ```
 
 #### response
@@ -263,7 +263,7 @@ curl --location --request GET '127.0.0.1:8080/v1/note/query?offset=0&limit=20&se
 ### Update Note
 ```shell
 curl --location --request PUT '127.0.0.1:8080/v1/note/$note_id' \
---header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzcwNzkyODAsImlkIjoxLCJvcmlnX2lhdCI6MTY3NzA3NTY4MH0.lgJdfukwgvyNkFZ2cSN7y0_En0G_62w0A2vJyKaPOo4' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzcyMzM3NDAsImlkIjoxLCJvcmlnX2lhdCI6MTY3NzIxMjE0MH0.ZsRqWyChL0ifazRk4m-xRR2XAMV-u8HtyVuKXwya0S4' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "title":"test",
@@ -290,7 +290,7 @@ curl --location --request PUT '127.0.0.1:8080/v1/note/$note_id' \
 ### Delete Note
 ```shell
 curl --location --request DELETE '127.0.0.1:8080/v1/note/$note_id' \
---header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzcwNzkyODAsImlkIjoxLCJvcmlnX2lhdCI6MTY3NzA3NTY4MH0.lgJdfukwgvyNkFZ2cSN7y0_En0G_62w0A2vJyKaPOo4'
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzcyMzM3NDAsImlkIjoxLCJvcmlnX2lhdCI6MTY3NzIxMjE0MH0.ZsRqWyChL0ifazRk4m-xRR2XAMV-u8HtyVuKXwya0S4'
 ```
 
 #### response

@@ -26,7 +26,7 @@ func Init() {
 func main() {
 	Init()
 	r := server.New(
-		server.WithHostPorts("127.0.0.1:8080"),
+		server.WithHostPorts(constants.ApiServiceAddr),
 		server.WithHandleMethodNotAllowed(true),
 	)
 	authMiddleware, _ := jwt.New(&jwt.HertzJWTMiddleware{
